@@ -66,6 +66,13 @@ function checkAnswer(card1,card2){
   };
 };
 
+//counts number of moves a user makes
+var counter = 0;
+function checkCounter(){
+  counter++
+  return counter
+};
+
 //if cards match, assigns class name "match", and emptys the .open-cards list. Also counts the number of times this function is called to identify number of correct answers.
 var rightAnswers = 0;
 function ifMatch() {
@@ -110,18 +117,12 @@ function gameEndAnimation(){
   $(".deck").addClass("animated " + "rubberBand");
 };
 
-//counts number of clicks on cards and displays it.
-function clickCounter(counter,target){
-  counter++ ;
-  $(target).val(counter);
-};
-
 //calculates user's star rating based on number of clicks.
 function checkScore(counter){
-  if (counter > 28){
+  if (counter > 15){
     $(".fa-star#3").css("color", "black");
   };
-  if (counter > 38){
+  if (counter > 25){
     $(".fa-star#2").css("color", "black");
   };
 };
@@ -178,9 +179,6 @@ function playGame(){
     $(startTimer());
     $(".deck.card").addClass("animated " + "flipInY");
 
-    var counter = $("#moveBox").val();
-    var target = "#moveBox";
-    $(clickCounter(counter, target));
     $(checkScore(counter));
 
     var checkList = $(".open-cards").find("li");
@@ -192,6 +190,9 @@ function playGame(){
 
     //checks if cards match. If they do, executes ifMatch(). Else, executes ifNotMatch()
     if (checkList.length === 2){
+      $(checkCounter());
+      $("#moveBox").val(counter);
+      console.log(counter)
       $(".deck li").css({ "pointer-events": "none" });
       $(".card.open.show").removeClass("animated " + "flipInY");
       if (checkAnswer(card1, card2) === true){
@@ -210,7 +211,6 @@ function playGame(){
 
     //checks to see if user has matched all the cards. If they have, launches congratulations modal and appends user's star rating and number of moves to it.
     if (rightAnswers === 8){
-      counter = Number(counter) + 1;
       $(gameEnd(counter));
       $(gameEndAnimation());
     };
