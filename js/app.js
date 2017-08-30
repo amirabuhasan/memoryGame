@@ -171,6 +171,8 @@ function playGame(){
 
   $(".deck").on("click", "li", function(){
 
+    $(this).css({ "pointer-events": "none" });
+
     $(toggleCards(this));
     $(checkMatch(this));
     $(startTimer());
@@ -190,6 +192,7 @@ function playGame(){
 
     //checks if cards match. If they do, executes ifMatch(). Else, executes ifNotMatch()
     if (checkList.length === 2){
+      $(".deck li").css({ "pointer-events": "auto" });
       $(".card.open.show").removeClass("animated " + "flipInY");
       if (checkAnswer(card1, card2) === true){
         $(ifMatchAnimation());
