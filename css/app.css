@@ -98,7 +98,7 @@ input {
     font-size: 33px;
 }
 
-.open-cards{
+.open-cards li{
   opacity: 0.0;
 }
 /*
