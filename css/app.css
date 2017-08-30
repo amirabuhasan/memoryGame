@@ -97,6 +97,10 @@ input {
     background: red;
     font-size: 33px;
 }
+
+.open-cards{
+  opacity: 0.0;
+}
 /*
  * Styles for the Score Panel
  */
