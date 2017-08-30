@@ -55,6 +55,7 @@ function toggleCards(element) {
 //for making a copy of cards and appending to .open-cards to identify whether they match.
 function checkMatch(element) {
   $(element).clone().appendTo(".open-cards");
+  $(".open-cards").css('opacity','0');
 };
 
 //identifies if two cards match by checking if the name the two list elements match.
