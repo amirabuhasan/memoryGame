@@ -192,17 +192,17 @@ function playGame(){
 
     //checks if cards match. If they do, executes ifMatch(). Else, executes ifNotMatch()
     if (checkList.length === 2){
-      $(".deck li").css({ "pointer-events": "auto" });
+      $(".deck li").css({ "pointer-events": "none" });
       $(".card.open.show").removeClass("animated " + "flipInY");
       if (checkAnswer(card1, card2) === true){
         $(ifMatchAnimation());
         $(ifMatch());
+        $(".deck li").css({ "pointer-events": "auto" });
       }else{
         $(ifNotMatchAnimation());
-        $(".deck").css({ "pointer-events": "none" });
         setTimeout(function(){
           $(".card.open.show").removeClass("animated " + "shake");
-          $(".deck").css({ "pointer-events": "auto" });
+          $(".deck li").css({ "pointer-events": "auto" });
           $(ifNotMatch());
         }  , 1000 );
       };
