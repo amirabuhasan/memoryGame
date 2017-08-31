@@ -51,6 +51,8 @@ input {
 .deck {
     width: 660px;
     min-height: 680px;
+    max-width: 100%;
+    height:auto;
     background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
     padding: 32px;
     border-radius: 10px;

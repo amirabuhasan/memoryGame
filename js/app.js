@@ -119,10 +119,10 @@ function gameEndAnimation(){
 
 //calculates user's star rating based on number of clicks.
 function checkScore(counter){
-  if (counter > 15){
+  if (counter >= 15){
     $(".fa-star#3").css("color", "black");
   };
-  if (counter > 25){
+  if (counter >= 25){
     $(".fa-star#2").css("color", "black");
   };
 };
@@ -179,8 +179,6 @@ function playGame(){
     $(startTimer());
     $(".deck.card").addClass("animated " + "flipInY");
 
-    $(checkScore(counter));
-
     var checkList = $(".open-cards").find("li");
 
     //finds the class name of the li elements of open-cards
@@ -191,6 +189,7 @@ function playGame(){
     //checks if cards match. If they do, executes ifMatch(). Else, executes ifNotMatch()
     if (checkList.length === 2){
       $(checkCounter());
+      $(checkScore(counter));
       $("#moveBox").val(counter);
       console.log(counter)
       $(".deck li").css({ "pointer-events": "none" });
