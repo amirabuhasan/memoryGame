@@ -51,8 +51,6 @@ input {
 .deck {
     width: 660px;
     min-height: 680px;
-    max-width: 100%;
-    height:auto;
     background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
     padding: 32px;
     border-radius: 10px;
@@ -227,3 +225,97 @@ input {
   .fa-star{
     color: #fdcc09;
   }
+
+  /*
+   * Different screen sizes
+   */
+
+   @media (max-width: 1200px) {
+     .deck .card {
+       width: 120px;
+       height: 120px;
+     }
+
+     .deck {
+       max-width: 810px;
+     }
+   }
+
+
+   @media (max-width: 880px) {
+     .deck .card {
+       width: 120px;
+       height: 120px;
+     }
+     .deck {
+       max-width: 700px;
+     }
+   }
+
+   @media (max-width: 800px) {
+
+     .deck .card {
+       width: 120px;
+       height: 120px;
+     }
+
+     .deck {
+       max-width: 660px;
+     }
+   }
+
+   @media (max-width: 700px) {
+     .deck .card {
+       width: 110px;
+       height: 110px;
+     }
+     .deck {
+       max-width: 580px;
+     }
+   }
+
+   @media (max-width: 660px) {
+
+     .deck .card {
+       width: 110px;
+       height: 110px;
+     }
+
+     .deck {
+       max-width: 580px;
+     }
+   }
+
+   @media (max-width: 580px) {
+
+     .deck .card {
+       width: 110px;
+       height: 110px;
+     }
+
+     .deck .card {
+       max-width: 500px;
+     }
+   }
+
+   @media (max-width: 500px) {
+     .deck .card {
+       width: 90px;
+       height: 90px;
+     }
+
+     .deck {
+       max-width: 450px;
+     }
+   }
+
+   @media (max-width: 450px) {
+     .deck .card {
+       width: 80px;
+       height: 80px;
+     }
+
+     .deck {
+       max-width: 400px;
+     }
+   }
