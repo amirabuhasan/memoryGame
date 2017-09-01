@@ -24,9 +24,19 @@ The game ends when all cards have been correctly matched.
 ![Alt text](/img/screenshot4.png?raw=true)
 
 ## Features
-* Time tracker.
-* Move tracker.
+* Time tracker that tracks the time taken for a user to complete a game.
+* Move tracker that tracks the number of moves a user makes.
 * Star Rating depending on the number of moves the user takes to complete the game.
+
+## Resources
+### Shuffle function
+http://stackoverflow.com/a/2450976
+
+### Timer function
+https://codepen.io/alemesa/pen/xgNjWL?page=10 by Alejandro Mesa
+
+### Congratulations modal
+http://freefrontend.com/css-modal-windows/ by Phillip Rappold
 
 ## Contributing
 This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
