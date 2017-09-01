@@ -19,6 +19,9 @@ The game ends when all cards have been correctly matched.
 
 ## Screenshots
 ![Alt text](/img/screenshot1.png?raw=true)
+![Alt text](/img/screenshot2.png?raw=true)
+![Alt text](/img/screenshot3.png?raw=true)
+![Alt text](/img/screenshot4.png?raw=true)
 
 ## Features
 * Time tracker.
