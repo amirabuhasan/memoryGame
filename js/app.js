@@ -79,7 +79,6 @@ function ifMatch() {
   $(".card.open").removeClass("show").addClass("match");
   $(".open-cards").empty();
   rightAnswers++;
-  console.log( "I have been called " + rightAnswers + " times" );
   return rightAnswers;
 };
 
@@ -191,7 +190,6 @@ function playGame(){
       $(checkCounter());
       $(checkScore(counter));
       $("#moveBox").val(counter);
-      console.log(counter)
       $(".deck li").css({ "pointer-events": "none" });
       $(".card.open.show").removeClass("animated " + "flipInY");
       if (checkAnswer(card1, card2) === true){
